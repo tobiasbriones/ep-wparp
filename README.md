@@ -9,6 +9,12 @@ wparp.pollingFiles(["../index.html"]);
 wparp.start();
 ```
 
+Also add the script to the HTML page to reload
+
+```
+<script src="_wparp/auto_reload.js"></script>
+```
+
 You can also test with the included sample by opening index.html from PHP localhost.
 
 ### Prerequisites
