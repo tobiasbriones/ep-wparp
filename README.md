@@ -12,4 +12,4 @@ wparp.start();
 You can also test with the included sample by opening index.html from PHP localhost.
 
 ### Prerequisites
-You need a PHP server to run the script on localhost.
+You need a PHP server to run your project on localhost.
