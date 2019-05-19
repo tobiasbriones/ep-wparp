@@ -19,3 +19,6 @@ You can also test with the included sample by opening index.html from PHP localh
 
 ### Prerequisites
 You need a PHP server to run your project on localhost.
+
+### WPARP Algorithm
+![algorithm](https://user-images.githubusercontent.com/39544153/51433372-7768fd80-1c0e-11e9-9aeb-6b7d1ff32fc5.png)
