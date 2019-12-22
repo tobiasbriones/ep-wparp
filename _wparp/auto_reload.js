@@ -1,11 +1,26 @@
-/**
- *  
- *  @author Tobias Briones - https://github.com/TobiasBriones | WPARP - https://github.com/TobiasBriones/wparp
-**/
+/*
+ * This file is part of example.programming.tool.php.wparp = WPARP.
+ *
+ * WPARP is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * WPARP is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with WPARP.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
-// Class
+/*
+ * Copyright (c) 2019 Tobias Briones
+ */
+
 /**
- * Class managing the polling algorithm.
+ * It manages the polling algorithm.
  */
 function WPARP() {
     
@@ -19,7 +34,6 @@ function WPARP() {
      */
     this.isRunning = () => {
         return active;
-        
     }
     
     /**
@@ -31,10 +45,8 @@ function WPARP() {
         if(active) {
             isRunningErrorMsg();
             return;
-            
         }
         pollingTimeMS = timeMS;
-        
     }
     
     /**
@@ -46,10 +58,8 @@ function WPARP() {
         if(active) {
             isRunningErrorMsg();
             return;
-            
         }
         pollingFiles = files;
-        
     }
     
     /**
@@ -59,7 +69,6 @@ function WPARP() {
         if(active) {
             isRunningErrorMsg();
             return;
-            
         }
         active = true;
         const request = new XMLHttpRequest();
@@ -72,18 +81,15 @@ function WPARP() {
             if(response.status != "OK") {
                 console.error(response.status);
                 return;
-                
             }
             runService();
             console.log("WPARP Files registered: " + pollingFiles);
             console.log("WPARP running...");
             pollingRequestDone = true;
-            
         });
         request.open("POST", url, true);
         request.setRequestHeader("Content-Type", "application/json");
         request.send(params);
-        
     }
     
     /**
@@ -99,13 +105,10 @@ function WPARP() {
             
             if(callback !== undefined) {
                 callback();
-                
             }
-            
         });
         request.open("POST", "_wparp/exit.php", true);
         request.send();
-        
     }
     
     function sendRequest() {
@@ -118,35 +121,28 @@ function WPARP() {
             
             if(response.data.hasChanges) {
                 location.reload();
-                
             }
             pollingRequestDone = true;
-            
         });
         request.open("POST", url, true);
         request.setRequestHeader("Content-Type", "application/json");
         request.send();
-        
     }
     
     function runService() {
         const i = setInterval(() => {
             if(active && pollingRequestDone) {
                 sendRequest();
-                
             }
             else if(!active) {
                 clearInterval(i);
-                
             }
             
         }, pollingTimeMS);
-        
     }
     
     function isRunningErrorMsg() {
         console.error("WPARP is running, end it first.");
-        
     }
     
 }
@@ -157,7 +153,6 @@ const wparp = new WPARP();
 // DOM
 window.onbeforeunload = () => {
     wparp.end();
-    
 }
 
 // Set up WPARP
