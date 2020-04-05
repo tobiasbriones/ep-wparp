@@ -24,3 +24,10 @@ You need a PHP server to run your project on localhost.
 
 ### WPARP Algorithm
 [![Algorithm](https://raw.githubusercontent.com/TobiasBriones/images/master/example-projects/example.programming.tool.php.wparp/wparp-algorithm.png)](https://github.com/TobiasBriones/images/tree/master/example-projects)
+
+## License
+Example Project - WPARP - Web Project Auto Reload Poll
+
+Copyright © 2019-2020 Tobias Briones. All rights reserved.
+
+This software is licensed under the [MIT License](https://github.com/TobiasBriones/example.programming.tool.php.wparp/blob/master/LICENSE).
