@@ -1,52 +1,67 @@
-<html>
+<!--
+  -- Copyright (c) 2019 Tobias Briones.
+  --
+  -- This source code is licensed under the MIT license found in the
+  -- LICENSE file in the root directory of this source tree.
+  -->
+
+<html lang="en">
+  
+  <head>
+    <title>WPARP</title>
+    <link rel="icon"
+          type="image/png"
+          href="https://raw.githubusercontent.com/TobiasBriones/images/master/example-projects/example-projects/favicon.png"
+          sizes="96x96">
+    <meta charset="UTF-8">
+    <style>
+      p {
+        position: absolute;
+        padding: 100px 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: chocolate;
+      }
+    </style>
+  </head>
+  
+  <body>
     
-    <head>
-        <meta charset="utf-8">
-        <style>
-            p {
-                position: absolute;
-                padding: 100px 20px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 24px;
-                font-weight: bold;
-                color: chocolate;
-                
-            }
-        </style>
-    </head>
+    <p>Modify me to automatically see the changes in the browser!</p>
+    <div>
+      <strong>© 2019 Tobias Briones - </strong>
+      <a href="https://github.com/TobiasBriones">GitHub</a>
+    </div>
+    <div>
+      <a href="https://github.com/TobiasBriones/example.programming.tool.php.wparp">
+        <strong>WPARP</strong>
+      </a>
+    </div>
     
-    <body>
-        <p>Modify me to automatically see the changes in the browser!</p>
-        <div>
-            <strong>© Tobias Briones 2019 - </strong>
-            <a href="https://github.com/TobiasBriones">GitHub</a>
-        </div>
-        <div>
-            <a href="https://github.com/TobiasBriones/wparp"><strong>WPARP</strong></a>
-        </div>
-        <script src="_wparp/auto_reload.js"></script>
-        <script>
-            /*
-                WPARP object
-                - isRunning: getter for the status
-                - pollingTime(timeMS): setter / getter for the polling's time
-                - pollingFiles(files): setter / getter for the files to keep track, the root is where auto_reload.js is located
-                - start(): starts and executes the service
-                - end(callback): ends the polling session, it is automatically called by auto_reload.js when onbeforeonload event occurs, pass callback if desired
-            */
-            /*
-                PHP server has to be running!
-            */
-           /*
-                WPARP sample setup, just make this in auto_reload.js at the end of the file
-           */
-            wparp.pollingFiles(["../index.html", "auto_reload.js"]);
-            wparp.start();
-            
-        </script>
-    </body>
-    
+    <script src="_wparp/auto_reload.js"></script>
+    <script>
+      /*
+       WPARP object
+       - isRunning: getter for the status
+       - pollingTime(timeMS): setter / getter for the polling's time
+       - pollingFiles(files): setter / getter for the files to keep track, the root is where auto_reload.js is located
+       - start(): starts and executes the service
+       - end(callback): ends the polling session, it is automatically called by auto_reload.js when onbeforeonload event occurs, pass callback if desired
+       */
+      /*
+       PHP server has to be running!
+       */
+      /*
+       WPARP sample setup, just make this in auto_reload.js at the end of the file
+       */
+      wparp.pollingFiles(['../index.html', 'auto_reload.js']);
+      wparp.start();
+    </script>
+  
+  </body>
+
 </html>

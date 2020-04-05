@@ -9,18 +9,18 @@
  * It manages the polling algorithm.
  */
 function WPARP() {
-  var active = false;
-  var pollingRequestDone = false;
-  var pollingTimeMS = 500;
-  var pollingFiles = [];
-
+  let active = false;
+  let pollingRequestDone = false;
+  let pollingTimeMS = 500;
+  let pollingFiles = [];
+  
   /**
    * Returns true iff the WPARP is running.
    */
   this.isRunning = () => {
     return active;
   };
-
+  
   /**
    * Sets/Gets the polling time in ms.
    * @param timeMS polling time in ms
@@ -33,7 +33,7 @@ function WPARP() {
     }
     pollingTimeMS = timeMS;
   };
-
+  
   /**
    * Sets/Gets the array of targeted files to keep track.
    * @param files array of targeted files
@@ -46,7 +46,7 @@ function WPARP() {
     }
     pollingFiles = files;
   };
-
+  
   /**
    * Starts the polling service.
    */
@@ -59,11 +59,11 @@ function WPARP() {
     const request = new XMLHttpRequest();
     const url = '_wparp/run.php';
     const params = JSON.stringify(pollingFiles);
-
+    
     request.addEventListener('load', () => {
       const response = JSON.parse(request.responseText);
-
-      if (response.status != 'OK') {
+      
+      if (response.status !== 'OK') {
         console.error(response.status);
         return;
       }
@@ -76,18 +76,18 @@ function WPARP() {
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(params);
   };
-
+  
   /**
    * Ends the polling service.
    * @param callback callback
    */
   this.end = callback => {
     const request = new XMLHttpRequest();
-
+    
     request.addEventListener('load', () => {
       console.log('WPARP ended');
       active = false;
-
+      
       if (callback !== undefined) {
         callback();
       }
@@ -95,15 +95,15 @@ function WPARP() {
     request.open('POST', '_wparp/exit.php', true);
     request.send();
   };
-
+  
   function sendRequest() {
     pollingRequestDone = false;
     const request = new XMLHttpRequest();
     const url = '_wparp/check.php';
-
+    
     request.addEventListener('load', () => {
       const response = JSON.parse(request.responseText);
-
+      
       if (response.data.hasChanges) {
         location.reload();
       }
@@ -113,17 +113,18 @@ function WPARP() {
     request.setRequestHeader('Content-Type', 'application/json');
     request.send();
   }
-
+  
   function runService() {
     const i = setInterval(() => {
       if (active && pollingRequestDone) {
         sendRequest();
-      } else if (!active) {
+      }
+      else if (!active) {
         clearInterval(i);
       }
     }, pollingTimeMS);
   }
-
+  
   function isRunningErrorMsg() {
     console.error('WPARP is running, end it first.');
   }
