@@ -1,4 +1,4 @@
-# Example Project - WPARP - Web Project Auto Reload Poll
+# Example Project: WPARP - Web Project Auto Reload Poll
 [![License](https://img.shields.io/github/license/TobiasBriones/example.programming.tool.php.wparp)](https://github.com/TobiasBriones/example.programming.tool.php.wparp/blob/master/LICENSE)
 
 Script that reloads the page on the browser when changes are detected on the targeted files to keep track of; similar to a Live Server. Changes are detected only if the file size changes with respect to the last modification.
@@ -26,7 +26,7 @@ You need a PHP server to run your project on localhost.
 [![Algorithm](https://raw.githubusercontent.com/TobiasBriones/images/master/example-projects/example.programming.tool.php.wparp/wparp-algorithm.png)](https://github.com/TobiasBriones/images/tree/master/example-projects)
 
 ## License
-Example Project - WPARP - Web Project Auto Reload Poll
+Example Project: WPARP - Web Project Auto Reload Poll
 
 Copyright © 2019-2020 Tobias Briones. All rights reserved.
 
