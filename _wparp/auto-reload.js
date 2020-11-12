@@ -11,7 +11,7 @@
 function Wparp() {
   let active = false;
   let pollingRequestDone = false;
-  let pollingTimeMS = 500;
+  let pollingTimeMs = 500;
   let pollingFiles = [];
 
   /**
@@ -27,13 +27,13 @@ function Wparp() {
    */
   this.pollingTime = timeMs => {
     if (timeMs === undefined) {
-      return pollingTimeMS;
+      return pollingTimeMs;
     }
     if (active) {
       isRunningErrorMsg();
       return;
     }
-    pollingTimeMS = timeMs;
+    pollingTimeMs = timeMs;
   };
 
   /**
@@ -119,14 +119,14 @@ function Wparp() {
   }
 
   function runService() {
-    const i = setInterval(() => {
+    const intervalId = setInterval(() => {
       if (active && pollingRequestDone) {
         sendRequest();
       }
       else if (!active) {
-        clearInterval(i);
+        clearInterval(intervalId);
       }
-    }, pollingTimeMS);
+    }, pollingTimeMs);
   }
 
   function isRunningErrorMsg() {
