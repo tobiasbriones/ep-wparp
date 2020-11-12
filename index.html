@@ -16,7 +16,7 @@
           sizes="96x96">
     <meta charset="UTF-8">
     <style>
-      p {
+      p.main-text {
         position: absolute;
         padding: 100px 20px;
         top: 50%;
@@ -32,7 +32,9 @@
 
   <body>
 
-    <p>Modify me to automatically see the changes in the browser!</p>
+    <p class="main-text">
+      Modify me to automatically see the changes in the browser!
+    </p>
     <div>
       <strong>© 2019 Tobias Briones - </strong>
       <a href="https://github.com/TobiasBriones">GitHub</a>
@@ -48,10 +50,11 @@
       /*
        WPARP object
        - isRunning: getter for the status
-       - pollingTime(timeMS): setter / getter for the polling's time
+       - pollingTime(timeMs): setter / getter for the polling's time
        - pollingFiles(files): setter / getter for the files to keep track, the root is where auto-reload.js is located
        - start(): starts and executes the service
-       - end(callback): ends the polling session, it is automatically called by auto-reload.js when onbeforeonload event occurs, pass callback if desired
+       - end(callback): ends the polling session, it is automatically called by auto-reload.js when onbeforeonload event
+          occurs, pass callback if desired
        */
       /*
        PHP server has to be running!
@@ -59,7 +62,7 @@
       /*
        WPARP sample setup, just make this in auto-reload.js at the end of the file
        */
-      wparp.pollingFiles(['../index.html', 'auto_reload.js']);
+      wparp.pollingFiles(['../index.html', 'auto-reload.js']);
       wparp.start();
     </script>
 
