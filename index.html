@@ -43,21 +43,21 @@
       </a>
     </div>
 
-    <script src="_wparp/auto_reload.js"></script>
+    <script src="_wparp/auto-reload.js"></script>
     <script>
       /*
        WPARP object
        - isRunning: getter for the status
        - pollingTime(timeMS): setter / getter for the polling's time
-       - pollingFiles(files): setter / getter for the files to keep track, the root is where auto_reload.js is located
+       - pollingFiles(files): setter / getter for the files to keep track, the root is where auto-reload.js is located
        - start(): starts and executes the service
-       - end(callback): ends the polling session, it is automatically called by auto_reload.js when onbeforeonload event occurs, pass callback if desired
+       - end(callback): ends the polling session, it is automatically called by auto-reload.js when onbeforeonload event occurs, pass callback if desired
        */
       /*
        PHP server has to be running!
        */
       /*
-       WPARP sample setup, just make this in auto_reload.js at the end of the file
+       WPARP sample setup, just make this in auto-reload.js at the end of the file
        */
       wparp.pollingFiles(['../index.html', 'auto_reload.js']);
       wparp.start();
