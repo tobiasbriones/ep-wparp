@@ -10,7 +10,7 @@ Example project consisting of a script that polls a PHP script to reload the pag
 when changes are detected on the targeted files to keep track of; similar to a Live Server. Changes
 are detected only if the file size changes with respect to the last modification.
 
-## Getting Started
+## Getting started
 
 Copy the folder "_wparp" into the root of your project, then open "_wparp/auto-reload.js" and in the
 end of the file set and run the algorithm, like this
