@@ -36,6 +36,10 @@ You need a PHP server to run your project on localhost.
 
 [![Algorithm](https://raw.githubusercontent.com/TobiasBriones/images/main/example-projects/example.programming.tool.php.wparp/wparp-algorithm.png)](https://github.com/TobiasBriones/images/tree/main/example-projects)
 
+## Screenshots
+
+[![Screenshot 1](https://raw.githubusercontent.com/TobiasBriones/images/main/example-projects/example.programming.tool.php.wparp/screenshot-1.png)](https://github.com/TobiasBriones/images/tree/main/example-projects)
+
 ## Contact
 
 This software: [GitHub Repository](https://github.com/TobiasBriones/example.programming.tool.php.wparp)
