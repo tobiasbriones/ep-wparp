@@ -11,7 +11,6 @@
  * https://opensource.org/licenses/MIT.
  */
 
-
 session_start();
 header("Content-Type: application/json");
 

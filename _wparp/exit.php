@@ -11,7 +11,6 @@
  * https://opensource.org/licenses/MIT.
  */
 
-
 session_start();
 $_SESSION = [];
 session_destroy();
