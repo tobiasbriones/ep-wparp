@@ -16,7 +16,7 @@ Copy the folder "_wparp" into the root of your project, then open "_wparp/auto-r
 end of the file set and run the algorithm, like this
 
 ```js
-wparp.pollingFiles(["../index.html"]);
+wparp.pollingFiles(['../index.html']);
 wparp.start();
 ```
 
