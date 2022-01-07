@@ -1,10 +1,10 @@
 # Example Project: WPARP - Web Project Auto Reload Poll
 
-[![EP](https://raw.githubusercontent.com/tobiasbriones/images/main/example-projects/example.programming.tool.php.wparp/ep-wparp-badge.svg)](https://tobiasbriones.github.io/example-project/ep/wparp)
+[![Project](https://raw.githubusercontent.com/tobiasbriones/images/main/example-projects/example.programming.tool.php.wparp/ep-wparp-badge.svg)](https://tobiasbriones.github.io/example-project/ep/wparp)
 &nbsp;
-[![GitHub Repository](https://raw.githubusercontent.com/tobiasbriones/general-images/main/example-projects/badges/ep-gh-repo-badge.svg)](https://github.com/tobiasbriones/ep-wparp)
+[![GitHub Repository](https://img.shields.io/static/v1?label=GITHUB&message=REPOSITORY&labelColor=555&color=0277bd&style=for-the-badge&logo=GITHUB)](https://github.com/tobiasbriones/ep-wparp)
 
-[![Project GitHub License](https://img.shields.io/github/license/tobiasbriones/ep-wparp.svg?style=flat-square)](https://github.com/tobiasbriones/ep-wparp/blob/main/LICENSE)
+[![GitHub Project License](https://img.shields.io/github/license/tobiasbriones/ep-wparp.svg?style=flat-square)](https://github.com/tobiasbriones/ep-wparp/blob/main/LICENSE)
 
 Example project consisting of a script that polls a PHP script to reload the page in the browser
 when changes are detected on the targeted files to keep track of; similar to a Live Server. Changes
